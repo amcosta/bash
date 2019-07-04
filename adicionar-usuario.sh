@@ -2,7 +2,7 @@
 
 for NOME in $(cat ./lista.txt)
 do
-    $(getent passwd $NOME)
+    RESULTADO=$(getent passwd $NOME)
     if [ $? -eq 0 ]
     then
         echo "O usuário $NOME já esta cadastrado!"
